@@ -1,0 +1,49 @@
+📦 ecommerce-app
+├── 📂 public
+│   └── favicon.ico
+│
+├── 📂 src
+│   ├── 📂 assets              # صور وأيقونات
+│   │   └── logo.png
+│   │
+│   ├── 📂 components          # Components قابلة لإعادة الاستخدام
+│   │   ├── Navbar.tsx
+│   │   ├── Footer.tsx
+│   │   ├── ProductCard.tsx
+│   │   ├── CartItem.tsx
+│   │   └── ChartCard.tsx
+│   │
+│   ├── 📂 context             # Context API
+│   │   ├── ThemeContext.tsx     # useContext للـ Dark/Light
+│   │   └── CartContext.tsx      # useReducer لإدارة السلة
+│   │
+│   ├── 📂 features            # Redux slices
+│   │   ├── productsSlice.ts     # AsyncThunk لجلب المنتجات
+│   │   ├── userSlice.ts         # تسجيل الدخول/الخروج
+│   │   └── ordersSlice.ts       # الطلبات
+│   │
+│   ├── 📂 hooks               # Custom hooks
+│   │   └── useLocalStorage.ts
+│   │
+│   ├── 📂 layouts             # Layouts أساسية
+│   │   ├── MainLayout.tsx       # Navbar + Footer + Outlet
+│   │   └── DashboardLayout.tsx
+│   │
+│   ├── 📂 pages               # صفحات Router
+│   │   ├── Home.tsx             # / المنتجات
+│   │   ├── ProductDetails.tsx   # /product/:id
+│   │   ├── Cart.tsx             # /cart
+│   │   ├── Login.tsx            # /login
+│   │   ├── Dashboard.tsx        # /dashboard
+│   │   ├── NotFound.tsx         # 404
+│   │   └── dashboard            # صفحات فرعية للـ Admin
+│   │       ├── DashboardHome.tsx   # إحصائيات + Charts
+│   │       ├── OrdersTable.tsx
+│   │       └── UsersTable.tsx
+│   │
+│   ├── 📂 store               # Redux Store
+│   │   └── store.ts
+│   │
+│   ├── App.tsx                # Routes + Providers
+│   ├── main.tsx               # Root render
+│   └── index.css              # Tailwind import + custom styles

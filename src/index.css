@@ -1,0 +1,40 @@
+@import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --color-primary: #f97316; /* orange-500 */
+  --color-primary-light: #fb923c; /* orange-400 */
+  --color-primary-dark: #ea580c; /* orange-600 */
+
+  --color-accent: #3b82f6; /* blue-500 */
+  --color-accent-dark: #2563eb; /* blue-600 */
+
+  --color-success: #22c55e; /* green-500 */
+  --color-warning: #eab308; /* yellow-500 */
+  --color-error: #ef4444; /* red-500 */
+
+  --color-neutral-light: #f9fafb; /* gray-50 */
+  --color-neutral: #6b7280; /* gray-500 */
+  --color-neutral-dark: #111827; /* gray-900 */
+}
+
+._ {
+  color: #f97316; /* اللون الأساسي */
+  color: #fb923c; /* Hover */
+  color: #ea580c; /* Active */
+
+  color: #3b82f6; /* للروابط او اي شئ ثانوي */
+  color: #2563eb; /* للمعلومات */
+
+  color: #22c55e; /* نجاح */
+  color: #eab308; /* تحذير */
+  color: #ef4444; /* خطأ */
+
+  color: #f9fafb; /* خلفيه */
+  color: #6b7280; /* للنصوص الخفيفه */
+  color: #111827; /* للنصوص الثقيله */
+}
+
+button {
+  cursor: pointer;
+}
