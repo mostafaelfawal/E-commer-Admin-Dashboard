@@ -2,12 +2,13 @@ import { Link } from "react-router-dom";
 import logo from "../assets/logoS.png";
 import { useContext } from "react";
 import { ThemeContext } from "../context/ThemeContext";
+import { FaShoppingCart } from "react-icons/fa";
 
 export default function Navbar() {
   const { theme, toggleTheme } = useContext(ThemeContext);
 
   return (
-    <header className="flex justify-between items-center px-8 py-4 bg-neutral-dark dark:bg-neutral-light shadow-md">
+    <header className="sticky top-0 z-10 flex justify-between items-center px-8 py-4 bg-neutral-dark dark:bg-neutral-light dark:text-black text-white shadow-md">
       {/* Logo */}
       <Link to="/" className="flex items-center gap-2">
         <img src={logo} alt="logo" className="w-10" />
@@ -54,6 +55,13 @@ export default function Navbar() {
         >
           Login
         </Link>
+
+        <div>
+          <div className="rounded-full w-5 h-5 p-2 bg-error border border-white dark:border-black flex justify-center items-center relative top-1 left-4">
+            2
+          </div>
+          <FaShoppingCart className="text-2xl cursor-pointer" />
+        </div>
 
         {/* Toggle Button */}
         <div

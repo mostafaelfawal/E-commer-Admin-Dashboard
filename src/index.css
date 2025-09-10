@@ -18,6 +18,7 @@
   --color-neutral-dark: #111827; /* gray-900 */
 }
 
+/* Test Color */
 ._ {
   color: #f97316; /* اللون الأساسي */
   color: #fb923c; /* Hover */
@@ -35,6 +36,47 @@
   color: #111827; /* للنصوص الثقيله */
 }
 
+/* ستايل الـ scrollbar لكل العناصر */
+* {
+  scrollbar-width: thin; /* للفايرفوكس */
+  scrollbar-color: var(--color-primary) var(--color-neutral-dark);
+}
+
+.dark {
+  scrollbar-color: var(--color-primary) var(--color-neutral-light);
+}
+
+/* لدعم المتصفحات browsers (Chrome, Edge, Safari) */
+*::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+*::-webkit-scrollbar-track {
+  background: var(--color-neutral-light);
+  border-radius: 10px;
+}
+
+*::-webkit-scrollbar-thumb {
+  background: var(--color-primary);
+  border-radius: 10px;
+  border: 2px solid var(--color-neutral-light);
+}
+
+*::-webkit-scrollbar-thumb:hover {
+  background: var(--color-primary-dark);
+}
+
+*::-webkit-scrollbar-thumb:active {
+  background: var(--color-primary-dark);
+}
+
+*::-webkit-scrollbar-corner {
+  background: var(--color-neutral-light);
+}
+
+/* defult element style */
 button {
   cursor: pointer;
 }
+

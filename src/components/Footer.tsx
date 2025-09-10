@@ -4,20 +4,20 @@ import { FaFacebook, FaTwitter, FaInstagram } from "react-icons/fa";
 
 export default function Footer() {
   return (
-    <footer className="bg-neutral-dark dark:bg-neutral-light text-white dark:text-neutral-dark p-6 mt-auto shadow-inner">
-      <div className="container mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
+    <footer className="bg-neutral-dark dark:bg-neutral-light text-white dark:text-neutral-dark p-6 shadow-inner">
+      <div className="container mx-auto flex flex-col md:flex-row items-center justify-between gap-4 ">
         {/* Logo */}
         <div className="flex items-center gap-2 flex-col">
           <img src={Logo} alt="logo" className="w-32" />
           <div className="w-full justify-around flex">
             <button>
-              <FaFacebook className="hover:text-primary size-7 duration-300"/>
+              <FaFacebook className="hover:text-primary size-7 duration-300" />
             </button>
             <button>
-              <FaTwitter className="hover:text-primary size-7 duration-300"/>
+              <FaTwitter className="hover:text-primary size-7 duration-300" />
             </button>
             <button>
-              <FaInstagram className="hover:text-primary size-7 duration-300"/>
+              <FaInstagram className="hover:text-primary size-7 duration-300" />
             </button>
           </div>
         </div>
