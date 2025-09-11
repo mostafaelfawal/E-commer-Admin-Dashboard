@@ -88,7 +88,7 @@ export default function Home() {
           </button>
         </div>
 
-        <div className="flex gap-2 max-w-full overflow-x-auto py-2">
+        <div className="flex gap-2 max-w-full overflow-x-auto p-2">
           <button
             onClick={() => handleCategorySelect("all")}
             className={`px-3 py-1 rounded transition-colors ${

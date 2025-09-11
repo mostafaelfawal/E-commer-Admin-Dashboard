@@ -5,7 +5,7 @@ import { ThemeContext } from "../context/ThemeContext";
 import { FaShoppingCart } from "react-icons/fa";
 
 export default function Navbar() {
-  const { theme, toggleTheme } = useContext(ThemeContext);
+  const { toggleTheme } = useContext(ThemeContext);
 
   return (
     <header className="sticky top-0 z-10 flex justify-between items-center px-8 py-4 bg-neutral-dark dark:bg-neutral-light dark:text-black text-white shadow-md">
@@ -23,23 +23,15 @@ export default function Navbar() {
           <li>
             <Link
               to="/"
-              className="hover:text-primary transition-colors duration-200"
+              className="hover:border-b-primary border-transparent border-5 transition-colors duration-200 pb-6"
             >
               Home
             </Link>
           </li>
           <li>
             <Link
-              to="/cart"
-              className="hover:text-primary transition-colors duration-200"
-            >
-              Cart
-            </Link>
-          </li>
-          <li>
-            <Link
               to="/dashboard/home"
-              className="hover:text-primary transition-colors duration-200"
+              className="hover:border-b-primary border-transparent border-5 transition-colors duration-200 pb-6"
             >
               Dashboard
             </Link>
@@ -56,7 +48,7 @@ export default function Navbar() {
           Login
         </Link>
 
-        <div>
+        <div className="pb-3">
           <div className="rounded-full w-5 h-5 p-2 bg-error border border-white dark:border-black flex justify-center items-center relative top-1 left-4">
             2
           </div>
@@ -65,16 +57,10 @@ export default function Navbar() {
 
         {/* Toggle Button */}
         <div
-          className={`w-14 h-7 flex items-center rounded-full p-1 cursor-pointer transition-all duration-300 ${
-            theme === "dark" ? "bg-primary" : "bg-neutral"
-          }`}
+          className="w-14 h-7 flex items-center rounded-full p-1 cursor-pointer transition-all duration-300 bg-primary dark:bg-neutral"
           onClick={() => toggleTheme()}
         >
-          <div
-            className={`bg-white w-5 h-5 rounded-full shadow-md transform duration-300 ${
-              theme === "dark" ? "translate-x-7" : "translate-x-0"
-            }`}
-          ></div>
+          <div className="bg-white w-5 h-5 rounded-full shadow-md transform duration-300 translate-x-7 dark:translate-x-0"></div>
         </div>
       </div>
     </header>
